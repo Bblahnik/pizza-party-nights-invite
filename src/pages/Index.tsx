@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -165,53 +164,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Details Section */}
-        <section id="details" className="py-16 px-4 bg-gradient-to-r from-orange-100 to-red-100">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Party Details 📋</h2>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-blue-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <Clock className="h-8 w-8 text-blue-500" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">When</h3>
-                  <p className="text-gray-600">Saturday Evening</p>
-                  <p className="text-gray-600">6:00 PM - 10:00 PM</p>
-                  <p className="text-sm text-gray-500 mt-2">Choose your preferred date when booking!</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-green-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <MapPin className="h-8 w-8 text-green-500" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Where</h3>
-                  <p className="text-gray-600">Our Home</p>
-                  <p className="text-gray-600">Cozy & Comfortable</p>
-                  <p className="text-sm text-gray-500 mt-2">Address will be provided after booking</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-purple-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <Utensils className="h-8 w-8 text-purple-500" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">What to Bring</h3>
-                  <p className="text-gray-600">Just Yourself!</p>
-                  <p className="text-gray-600">& Your Appetite</p>
-                  <p className="text-sm text-gray-500 mt-2">We've got everything covered</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* Why Join Section */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-6xl mx-auto text-center">
@@ -232,6 +184,23 @@ const Index = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Let's be real Section */}
+        <section id="details" className="py-16 px-4 bg-gradient-to-r from-orange-100 to-red-100">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Let's be real 💯</h2>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-lg">
+                <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-center">
+                  Look, we know you've got a million things going on, but hear us out – this isn't just another dinner party. We're talking about homemade pizza (yes, we actually make the dough from scratch), great music that won't make your ears bleed, and the kind of relaxed evening where you can actually unwind. No fancy dress code, no awkward small talk about the weather. Just good food, good people, and probably way too much cheese. Trust us, your Saturday night deserves this upgrade.
+                </p>
+              </div>
             </div>
           </div>
         </section>

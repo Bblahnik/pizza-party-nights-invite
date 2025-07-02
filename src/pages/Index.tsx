@@ -273,8 +273,8 @@ const Index = () => {
                 },
                 {
                   icon: Home,
-                  title: "Limited Time Commitment",
-                  desc: "We won’t kick you out, but we do these things in about 2 hours increments. That way everyone knows what to expect.",
+                  title: "Limited Time",
+                  desc: "We do these things in about 2 hours. You can get the kids to bed on time.",
                 },
               ].map((item, index) => (
                 <div

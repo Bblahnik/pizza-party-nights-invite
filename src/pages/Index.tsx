@@ -124,9 +124,9 @@ const Index = () => {
             {/* Hero Image */}
             <div className="mt-16 rounded-3xl overflow-hidden shadow-2xl mx-auto max-w-4xl animate-scale-in">
               <img
-                src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=1200&q=80"
-                alt="Delicious pizza spread"
-                className="w-full h-64 md:h-96 object-cover hover:scale-105 transition-transform duration-700"
+                src="https://photos.smugmug.com/photos/i-ppHgLXS/1/MCPPVXPtbLFfzpHZHghdCfvVBKHKKjMbWCd7wSxWb/L/i-ppHgLXS-L.jpg"
+                alt="Delicious pizza"
+                className="w-full h-64 md:h-[28rem] object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
           </div>
@@ -220,8 +220,8 @@ const Index = () => {
 
               <div className="rounded-3xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=800&q=80"
-                  alt="Cozy living room gathering"
+                  src="https://photos.smugmug.com/photos/i-MN4XPSN/0/MvrDmm3HcrKKv3sB5XG2DrPmrnbQJp3Vw6kGVwQCc/M/i-MN4XPSN-M.jpg"
+                  alt="Cozy Kitchen Gathering"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>

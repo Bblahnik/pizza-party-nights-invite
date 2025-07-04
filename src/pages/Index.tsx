@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -36,38 +36,17 @@ const Index = () => {
     };
   }, []);
 
+  // Handler to open the booking page in a new tab
   const openBookingPopup = () => {
-    // The Google Calendar scheduling will be handled by the embedded script
-    const script = document.createElement("script");
-    script.innerHTML = `
-      (function() {
-        window.addEventListener('load', function() {
-          if (window.calendar && window.calendar.schedulingButton) {
-            calendar.schedulingButton.load({
-              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1cRyYPbXbCzP_QqnD2iEG1zUbVvgLjdQV1N_ffIGLnYWGiCl6GlFDFp4sMfIXtkI_lNq2e3sfh?gv=true',
-              color: '#FF6B35',
-              label: 'Book Your Spot!',
-              target: document.body,
-            });
-          }
-        });
-      })();
-    `;
-    document.head.appendChild(script);
+    window.open(
+      "https://calendar.app.google/gGZnnxofhHVqzjNY6",
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   return (
     <>
-      {/* Google Calendar Styling and Scripts */}
-      <link
-        href="https://calendar.google.com/calendar/scheduling-button-script.css"
-        rel="stylesheet"
-      />
-      <script
-        src="https://calendar.google.com/calendar/scheduling-button-script.js"
-        async
-      ></script>
-
       <div className="min-h-screen bg-gradient-to-b from-orange-50 to-red-50">
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 shadow-sm">
@@ -343,12 +322,18 @@ const Index = () => {
                 Click the button below to choose your preferred date and time:
               </p>
               <Button
+                asChild
                 size="lg"
-                className="bg-white text-orange-500 hover:bg-gray-100 text-xl px-12 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                onClick={openBookingPopup}
+                className="bg-white text-orange-500 hover:bg-gray-100 text-xl px-12 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 mt-6"
               >
-                <Calendar className="mr-3 h-6 w-6" />
-                Pick Your Night!
+                <a
+                  href="https://calendar.app.google/gGZnnxofhHVqzjNY6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Calendar className="mr-3 h-6 w-6" />
+                  Pick Your Night!
+                </a>
               </Button>
             </div>
 
@@ -357,26 +342,7 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Google Calendar Integration */}
-          <div id="google-calendar-booking" className="hidden">
-            <script>
-              {`
-                (function() {
-                  var target = document.currentScript;
-                  window.addEventListener('load', function() {
-                    if (window.calendar && window.calendar.schedulingButton) {
-                      calendar.schedulingButton.load({
-                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1cRyYPbXbCzP_QqnD2iEG1zUbVvgLjdQV1N_ffIGLnYWGiCl6GlFDFp4sMfIXtkI_lNq2e3sfh?gv=true',
-                        color: '#FF6B35',
-                        label: 'Book Your Pizza Party Spot!',
-                        target,
-                      });
-                    }
-                  });
-                })();
-              `}
-            </script>
-          </div>
+          {/* Google Calendar Integration handled via React useEffect and ref */}
         </section>
 
         {/* Footer */}

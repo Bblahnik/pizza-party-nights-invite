@@ -72,7 +72,9 @@ const Index = () => {
                   Details
                 </a>
                 <a
-                  href="#booking"
+                  href="https://calendar.app.google/DaqbCYADwsqs94Y86"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-600 hover:text-orange-500 transition-colors"
                 >
                   Pick
@@ -87,7 +89,7 @@ const Index = () => {
           <div className="max-w-6xl mx-auto text-center">
             <div className="animate-fade-in">
               <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-6">
-                🍕 Epic Pizza Party Night! 🍕
+                🍕 Epic Pizza Night! 🍕
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Okay maybe not ‘epic’, but enjoyable? I think we can say
@@ -103,6 +105,7 @@ const Index = () => {
                   <Calendar className="mr-2 h-5 w-5" />
                   Pick Your Night!
                 </Button>
+                {/* remove this button 
                 <Button
                   variant="outline"
                   size="lg"
@@ -114,7 +117,7 @@ const Index = () => {
                   }
                 >
                   Learn More
-                </Button>
+                </Button> */}
               </div>
             </div>
 
@@ -238,7 +241,7 @@ const Index = () => {
                 {
                   icon: Heart,
                   title: "Bring the Littles",
-                  desc: "Making pizza with kids is chaotic. We’ll lean into that.",
+                  desc: "Making pizza with kids is chaotic. We’ll lean into that. They can watch a movie after we eat.",
                 },
                 {
                   icon: Users,
@@ -338,7 +341,13 @@ const Index = () => {
             </div>
 
             <p className="text-sm opacity-75">
-              Questions? Feel free to reach out to us directly!
+              Questions? Feel free to{" "}
+              <a
+                href="mailto:casablahnik@gmail.com"
+                className="underline text-white hover:text-orange-100"
+              >
+                reach out to us directly!
+              </a>
             </p>
           </div>
 
@@ -350,7 +359,7 @@ const Index = () => {
           <div className="max-w-6xl mx-auto text-center">
             <div className="flex items-center justify-center space-x-2 mb-4">
               <Pizza className="h-8 w-8 text-orange-500" />
-              <span className="text-2xl font-bold">Pizza Party Night</span>
+              <span className="text-2xl font-bold">Pizza Night</span>
             </div>
             <p className="text-gray-400 mb-4">
               Friends, community, social networking the old fashioned way
